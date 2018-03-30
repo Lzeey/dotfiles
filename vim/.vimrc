@@ -45,11 +45,10 @@ else
 endif
 
 " NERDTree config
-autocmd vimenter * NERDTree " auto startup NERDTree
+autocmd vimenter * NERDTree | wincmd p " auto startup NERDTree
 "For mouse click in NERDTree
 :set mouse=a
 let g:NERDTreeMouseMode=3
 " Prettyify NERDTree
 let NERDTreeMinimalUI=1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif "autoclose NERDTree if last window is open
-
