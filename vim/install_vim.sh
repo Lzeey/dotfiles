@@ -5,9 +5,6 @@ sudo apt -y install vim
 #Install vundle - vim package manager
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-# Get NERDTree
-git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
-
 # Install colorschemes
 git clone https://github.com/flazz/vim-colorschemes.git ~/.vim/colorschemes
 mv ~/.vim/colorschemes/* ~/.vim/
