@@ -1,0 +1,24 @@
+[global_config]
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  geometry_hinting = False
+  handle_size = 2
+  title_hide_sizetext = True
+  title_inactive_bg_color = "#2a2a2a"
+  title_inactive_fg_color = "#949494"
+  title_transmit_bg_color = "#717171"
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_darkness = 0.92
+    background_image = None
+    background_type = transparent
+    scrollback_lines = 2000
