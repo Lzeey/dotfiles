@@ -11,7 +11,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'file:///~/.vim/bundle/nerdtree'
+" Plugin 'file:///~/.vim/bundle/nerdtree'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -45,10 +45,10 @@ else
 endif
 
 " NERDTree config
-autocmd vimenter * NERDTree | wincmd p " auto startup NERDTree
+" autocmd vimenter * NERDTree | wincmd p " auto startup NERDTree
 "For mouse click in NERDTree
-:set mouse=a
-let g:NERDTreeMouseMode=3
+" :set mouse=a
+" let g:NERDTreeMouseMode=3
 " Prettyify NERDTree
-let NERDTreeMinimalUI=1
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif "autoclose NERDTree if last window is open
+" let NERDTreeMinimalUI=1
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif "autoclose NERDTree if last window is open
