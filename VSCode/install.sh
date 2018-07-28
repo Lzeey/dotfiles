@@ -8,11 +8,11 @@ sudo apt-get update &&
 sudo apt-get install -y code &&
 
 # Installs python extensions
-code --install-extensions ms-python.anaconda-extension-pack
-code --install-extensions pkief.material-icon-theme
-code --install-extensions ms-python.python
-code --install-extensions redhat.vscode-yaml
-code --install-extensions robertohuertasm.vscode-icons
+code --install-extension ms-python.anaconda-extension-pack
+code --install-extension pkief.material-icon-theme
+code --install-extension ms-python.python
+code --install-extension redhat.vscode-yaml
+code --install-extension robertohuertasm.vscode-icons
 
 echo "Installed extensions"
 echo "$(code --list-extensions)"
