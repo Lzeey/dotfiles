@@ -1,5 +1,21 @@
 . "$BASH_IT/themes/powerline/powerline.base.bash"
 
+#Overwrite __powerline_cwd_prompt from base file
+function __powerline_cwd_prompt {
+  # Only show ellipses for directory trees -gt 3
+  # Otherwise use the default pwd as the current \w replacement
+  local cwd=$(pwd | sed "s|^${HOME}|~|")
+  if [ $(echo ${cwd%/} | grep -o '/' | wc -l) -gt 4 ]; then
+    local base_dir=$(echo "$cwd" | cut -d'/' -f 1-2 )
+    # Trick to grab last 3 parts of pwd
+    # Inpsired by: https://stackoverflow.com/questions/22727107/how-to-find-the-last-field-using-cut
+    local leaf_dir=$(echo "$cwd" | rev | cut -d'/' -f1-3 | rev)
+    echo "${base_dir}/../${leaf_dir}|${CWD_THEME_PROMPT_COLOR}"
+  else
+    echo "${cwd}|${CWD_THEME_PROMPT_COLOR}"
+  fi
+}
+
 function __powerline_left_segment {
   local OLD_IFS="${IFS}"; IFS="|"
   local params=( $1 )
