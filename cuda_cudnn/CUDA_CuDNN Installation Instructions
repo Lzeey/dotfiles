@@ -11,19 +11,19 @@ $ sudo apt-get install cuda
 Step 1: Exporting PATH
 Export environment variables in .profile (only your user) or /etc/environment (global)
 
-Step 1.a: Insert the following in either of the above files
+Step 2: Insert the following in either of the above files
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64"
 export CUDA_HOME=/usr/local/cuda
 
-Step 2: (So you don't have to restart your computer to load the env variables)
+Step 3: (So you don't have to restart your computer to load the env variables)
 source {name of file} 
 
-Step 3: Testing CUDA Installation
+Step 4: Testing CUDA Installation
 $ cd /usr/local/cuda-8.0/samples/5_Simulations/nbody
 $ sudo make
 $ ./nbody
 
-Step 4: Unpacking CuDNN v7
+Step 5: Unpacking CuDNN v6
 $ tar -xzvf cudnn-8.0-linux-x64-v6.0.tgz
 $ sudo cp cuda/include/cudnn.h /usr/local/cuda/include
 $ sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
