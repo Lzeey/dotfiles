@@ -8,7 +8,7 @@ git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
 ~/.bash_it/install.sh
 
 # Soft-link the custom theme onto the theme folder
-ln -s powerline-plain-custom ~/.bash-it/themes/powerline-plain-custom
+ln -s "$(pwd)/powerline-plain-custom" ~/.bash-it/themes/powerline-plain-custom
 
 # Replaces default bobby theme with powerline-plain
 sed -i 's/BASH_IT_THEME=.*/BASH_IT_THEME="powerline-plain-custom"/' ~/.bashrc
