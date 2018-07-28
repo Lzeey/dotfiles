@@ -1,12 +1,20 @@
 # Bash customization
 # 1. Installs bashit (with custom theme)
-# 2. Customize less (for colored man pages)
+# 2. Installs powerline fonts
+# 3. Customize less (for colored man pages)
 
 git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
 # Runs the installation script. Requires a yes prompt
 ~/.bash_it/install.sh
+
+# Soft-link the custom theme onto the theme folder
+ln -s powerline-plain-custom ~/.bash-it/themes/powerline-plain-custom
+
 # Replaces default bobby theme with powerline-plain
-sed -i 's/BASH_IT_THEME=.*/BASH_IT_THEME="powerline-plain"/' ~/.bashrc
+sed -i 's/BASH_IT_THEME=.*/BASH_IT_THEME="powerline-plain-custom"/' ~/.bashrc
+
+# Installs powerline font
+sudo apt-get install -y fonts-powerline
 
 # Appends colouring for less (for man pages)
 cat >> ~/.bashrc << EOL
