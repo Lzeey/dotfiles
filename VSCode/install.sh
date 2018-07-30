@@ -23,6 +23,6 @@ ln -s "$(pwd)/settings.json" ~/.config/Code/User/settings.json
 # Installs Hack Nerd Font (for user)
 mkdir -p ~/.config/share/fonts
 cd ~/.local/share/fonts
-curl -fL --output "Hack Regular Nerd Font Complete Mono.ttf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete.ttf
+curl -fL --output "~/.config/share/fonts/Hack Regular Nerd Font Complete Mono.ttf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete.ttf
 
 echo "Installation Done"
