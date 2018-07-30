@@ -13,7 +13,7 @@ code --install-extension pkief.material-icon-theme
 code --install-extension ms-python.python
 code --install-extension redhat.vscode-yaml
 code --install-extension robertohuertasm.vscode-icons
-
+code --install-extensions donjayamanne.jupyter
 echo "Installed extensions"
 echo "$(code --list-extensions)"
 
@@ -21,8 +21,9 @@ echo "$(code --list-extensions)"
 ln -s "$(pwd)/settings.json" ~/.config/Code/User/settings.json
 
 # Installs Hack Nerd Font (for user)
-mkdir -p ~/.config/share/fonts
+mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts
-curl -fL --output "~/.config/share/fonts/Hack Regular Nerd Font Complete Mono.ttf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete.ttf
+curl -fL --output "Hack Regular Nerd Font Complete Mono.ttf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete%20Mono.ttf
+curl -fL --output "Meslo LG S Regular Nerd Font Complete Mono.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Meslo/S/complete/Meslo%20LG%20S%20Regular%20Nerd%20Font%20Complete%20Mono.otf
 
 echo "Installation Done"
