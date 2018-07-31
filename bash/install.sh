@@ -29,3 +29,8 @@ export GROFF_NO_SGR=1                  # for konsole and gnome-terminal
 EOL
 
 echo -e "\033[1;32mDone\033[0m"
+
+#Installs custom alias
+echo "" >> ~/.bashrc
+echo "# Custom alias for bashrc" >> ~/.bashrc 
+echo ". " "$(pwd)/alias.bash" >> ~/.bashrc
