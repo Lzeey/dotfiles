@@ -36,3 +36,8 @@ function up() {
 }
 
 alias tmux="tmux -2" #Force 256 terminal
+
+# MacOS/UNIX compatible sed replace
+sedi () {
+    sed --version >/dev/null 2>&1 && sed -i -- "$@" || sed -i "" "$@"
+}
