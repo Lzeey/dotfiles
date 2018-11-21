@@ -17,6 +17,7 @@ ln -s "$(pwd)/powerline-plain-custom" ~/.bash_it/themes/powerline-plain-custom
 sedi 's/BASH_IT_THEME=.*/BASH_IT_THEME="powerline-plain-custom"/' ~/.bash_profile
 
 # Installs powerline font
+brew tap homebrew/font-casks
 brew cask install font-menlo-for-powerline font-source-code-pro-for-powerline
 
 # Appends colouring for less (for man pages)
